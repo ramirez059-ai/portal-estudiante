@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal del Estudiante - ITTol</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <img src="img/encabezado.png" alt="TecNM - Instituto Tecnológico de Toluca" class="encabezado">
+</header>
+
+<div class="contenedor">
+
+  <div class="portal">Portal del Estudiante</div>
+
+  <div class="info">
+    <div class="barra">Información Personal</div>
+
+    <div class="perfil">
+      <img src="img/alumno.jpg" alt="Foto del alumno">
+      <h3>ARTURO ISAIN PÉREZ FUENTES</h3>
+      <div class="correo">
+        <i class="fa-brands fa-windows icono-win"></i>
+        <div>
+          <div class="correo-label">Correo Institucional:</div>
+          <div class="correo-valor">L23280060@toluca.tecnm.mx</div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="datos-lista">
+      <li><strong>Número de Control:</strong> 23280060</li>
+      <li><strong>Carrera:</strong> INGENIERÍA MECATRÓNICA</li>
+      <li><strong>Especialidad:</strong> DISEÑO DE SISTEMAS EMBEBIDOS</li>
+      <li><strong>Promedio General:</strong> 78.31</li>
+      <li><strong>Estado Académico:</strong> INSCRITO</li>
+    </ul>
+
+    <div class="pagos-ref">
+      <span class="pagos-label">Pagos Referenciados</span>
+      <div class="pagos-iconos">
+        <div class="pago-btn"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="pago-btn"><i class="fa-solid fa-comment"></i></div>
+        <div class="pago-btn"><i class="fa-solid fa-gear"></i></div>
+        <div class="pago-btn activo"><i class="fa-solid fa-file-lines"></i></div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <div class="info-btn">Información</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn activo" onclick="mostrar('bienvenido', this)">Bienvenido</button>
+    <button class="tab-btn" onclick="mostrar('calificaciones', this)">Calificaciones</button>
+    <button class="tab-btn" onclick="mostrar('carga', this)">Carga</button>
+    <button class="tab-btn" onclick="mostrar('adios', this)">Adiós</button>
+  </div>
+
+  <div id="bienvenido" class="seccion activa" onclick="irACalificaciones()" style="cursor:pointer;">
+    <div class="bienvenido-titulo">Bienvenido</div>
+    <div class="halcon">
+      <img src="img/ittol.png" alt="Escudo ITTol">
+    </div>
+  </div>
+
+  <div id="calificaciones" class="seccion">
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Semestre</th>
+            <th>Nombre</th>
+            <th>Créditos</th>
+            <th>Unidad 1</th>
+            <th>Unidad 2</th>
+            <th>Unidad 3</th>
+            <th>Unidad 4</th>
+            <th>Unidad 5</th>
+            <th>Unidad 6</th>
+            <th>Unidad 7</th>
+            <th>Unidad 8</th>
+            <th>Unidad 9</th>
+            <th>Calificación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7</td>
+            <td>EC DIF</td>
+            <td>5</td>
+            <td>75</td>
+            <td>85</td>
+            <td>76</td>
+            <td>85</td>
+            <td>85</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>DISEÑO ELEM MEC</td>
+            <td>5</td>
+            <td>70</td>
+            <td>82</td>
+            <td>92</td>
+            <td>70</td>
+            <td>70</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>MANTTO</td>
+            <td>5</td>
+            <td>70</td>
+            <td>70</td>
+            <td>70</td>
+            <td>70</td>
+            <td>70</td>
+            <td>70</td>
+            <td>70</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>PARA PROYECTO DE EVALUACIÓN DE Y</td>
+            <td>3</td>
+            <td>75</td>
+            <td>82</td>
+            <td>78</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>PROG DE REGISTRO CONTINUO</td>
+            <td>5</td>
+            <td>70</td>
+            <td>70</td>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="carga" class="seccion">
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Oportunidad</th>
+            <th>Profesor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PROG DE REGISTRO CONTINUO</td>
+            <td>17-18/PLC</td>
+            <td>17-19/PLC</td>
+            <td></td>
+            <td>17-19/PLC</td>
+            <td></td>
+            <td></td>
+            <td>Curso Ordinario 2a Oportunidad</td>
+            <td>TORRES SÁNCHEZ GABRIEL</td>
+          </tr>
+          <tr>
+            <td>DISEÑO ELEM MEC</td>
+            <td>12-13/D3-2</td>
+            <td></td>
+            <td>11-13/D3-2</td>
+            <td></td>
+            <td>11-13/D3-2</td>
+            <td></td>
+            <td>Curso de Repetición 2a Oportunidad</td>
+            <td>SILVAN DÍAZ KARLA</td>
+          </tr>
+          <tr>
+            <td>EC DIF</td>
+            <td>16-17/D3-4</td>
+            <td>15-17/D3-4</td>
+            <td></td>
+            <td>15-17/D3-4</td>
+            <td></td>
+            <td></td>
+            <td>Curso de Repetición 2a Oportunidad</td>
+            <td>MONROY RIVERA SOTERO</td>
+          </tr>
+          <tr>
+            <td>PARA PROYECTO DE EVALUACIÓN DE Y</td>
+            <td>11 12/D3 13</td>
+            <td></td>
+            <td></td>
+            <td>11 13/D3 13</td>
+            <td></td>
+            <td></td>
+            <td>Curso Ordinario 2a Oportunidad</td>
+            <td>FLORES HERNÁNDEZ REYNA MARTINA</td>
+          </tr>
+          <tr>
+            <td>MANTTO</td>
+            <td>9 10/D3.8</td>
+            <td></td>
+            <td>9 11/D3.8</td>
+            <td></td>
+            <td>9 11/D3.8</td>
+            <td></td>
+            <td>Curso Ordinario 2a Oportunidad</td>
+            <td>BARAJAS HIDALGO ARTURO</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="adios" class="seccion">
+    <p>Hasta luego.</p>
+  </div>
+
+  <div class="pie-links">
+    <a href="#" class="pie-link">
+      <i class="fa-brands fa-windows icono-win-small"></i>
+      Ingresa a tu correo institucional
+    </a>
+    <a href="#" class="pie-link">
+      <i class="fa-regular fa-newspaper"></i>
+      Últimas noticias de ittoluca
+    </a>
+  </div>
+
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
